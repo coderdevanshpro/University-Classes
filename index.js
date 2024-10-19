@@ -137,3 +137,57 @@ arr.forEach((a)=>{console.log(a*a);})
 
 
 // Map, filter, reduce, find, Some
+
+// Map - returns a new modified array based on call back function
+
+let a=[1,2,3,4,5,6,7,8,9,10];
+
+function square(x)
+{
+    return x*x;
+}
+let squareArr = a.map(square);
+console.log(squareArr);
+
+const mapOverview = (arr,fun) =>
+{
+const sq=[];
+for(let ele of a)
+{
+    sq.push(square(ele));
+}
+return sq;
+}
+
+function cube(x)
+{
+    return x*x*x;
+}
+console.log(mapOverview(a,square));
+console.log(a.map(cube))
+
+let y=5;
+const newArr = a.map((x,y)=>{
+    return x*y;
+})
+console.log(newArr);
+
+// Filter - Accepts a call back function (boolean) and push the element only if the call back function return true;
+
+function odd(x)
+{
+    return x%2;
+}
+
+let oddArr = a.filter(odd);
+console.log(oddArr);
+
+let aa=[1,2,3,4,5];
+function x(aa){
+    for (let index = 0; index < aa.length; index++) {
+        console.log(aa[index]);
+    }
+    
+}
+x(aa);
+
